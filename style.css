@@ -1,0 +1,203 @@
+body {
+    margin: 0;
+    font-size: 1em;
+    background-color: #80808080;
+}
+
+/* Typography */
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    color: black;
+    font-family: Smythe, sans-serif;
+}
+
+.heroHeader,
+.heroPara {
+    color: white;
+}
+
+.heroHeader {
+    padding: 2rem 2rem 0;
+}
+.heroPara {
+    padding: 0rem 2rem 2rem;
+}
+
+.itemHeading {
+    font-size: 1.25em;
+}
+
+.ingredients {
+    color: #8b8b8b;
+    font-size: 0.75em;
+}
+
+.priceTag {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+.modalHeading {
+    font-family: sans-serif;
+    padding: 1rem;
+}
+/* Containers */
+.appContainer {
+    max-width: 600px;
+    background-color: #fff;
+    padding-bottom: 2em;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-image: url("./img/burger.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.itemContainer {
+    display: flex;
+    align-items: center;
+}
+
+.descriptionContainer {
+    margin-left: 1em;
+}
+
+.nameAndButtonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style */
+
+.menuList {
+    list-style: none;
+    padding: 0 2em;
+}
+
+.menuItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid grey;
+    padding: 0.5em 0 1em;
+}
+
+.orderDetails {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2em;
+}
+
+.orderedItems {
+    list-style: none;
+    overflow: scroll;
+    height: 70px;
+    padding: 0 2em;
+    width: 100%;
+    font-family: Smythe;
+}
+
+.orderItem,
+.totalPrice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.totalPrice {
+    border-top: 2px solid black;
+}
+
+.addToMenuButton {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid gray;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.orderButton,
+.submitButton {
+    width: 100%;
+    color: white;
+    background-color: #16db99;
+    border: none;
+    border-radius: 2px;
+    margin: 1em;
+    padding: 0.75em;
+}
+
+.submitButton {
+    margin: 1rem 0;
+    width: 85%;
+}
+
+.removeButton {
+    background-color: transparent;
+    border: none;
+    color: gray;
+    font-size: 0.6rem;
+}
+
+.modal,
+.finishedOrderModal {
+    display: none;
+    position: fixed;
+    top: 20%;
+    width: 100%;
+}
+
+.modalContent,
+.finishedOrderModalContent {
+    width: 85%;
+    margin: 0 auto;
+    padding: 1rem 0;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border: 2px solid gray;
+    box-shadow: 0px 75px 50px #88888880, 0px -75px 50px #88888880;
+}
+
+input {
+    width: 80%;
+    border-radius: 5px;
+    margin: 1em;
+    padding: 0.5rem;
+}
+
+/* IMG */
+
+.emojiIcon {
+    font-size: 3em;
+}
+
+@media (min-width: 600px) {
+    .appContainer {
+        margin: 0 auto;
+        max-width: 600px;
+    }
+    .modal,
+    .finishedOrderModal {
+        display: none;
+        position: fixed;
+        top: 20%;
+        width: 600px;
+    }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Jimmy's Diner</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Smythe&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="appContainer">
+            <div class="modal">
+                <div class="modalContent">
+                    <h2 class="modalHeading">Enter card details</h2>
+                    <form id="paymentForm"></form>
+                    <input type="text" name="name" id="name" placeholder="Enter name" />
+                    <input
+                        type="number"
+                        name="cardNumber"
+                        id="cardNumber"
+                        placeholder="Enter card number"
+                    />
+                    <input type="number" name="cvv" id="cvv" placeholder="Enter CVV" />
+                    <button class="submitButton">Pay</button>
+                </div>
+            </div>
+            <div class="finishedOrderModal">
+                <div class="finishedOrderModalContent">
+                    <h2>Order recieved!</h2>
+                    <p>Thank you for eating at Jimmy's Diner!</p>
+                </div>
+            </div>
+            <header class="hero">
+                <h1 class="heroHeader">Jimmy's Diner</h1>
+                <p class="heroPara">The best burgers and pizza in town</p>
+            </header>
+            <main class="menu"></main>
+            <section class="orderDetails">
+                <h2>Your Order</h2>
+                <ul class="orderedItems"></ul>
+                <div class="totalPrice">
+                    <h3>Total Price</h3>
+                    <h3 id="finalPrice">0$</h3>
+                </div>
+                <button class="orderButton">Complete order</button>
+            </section>
+        </div>
+        <script src="index.js" type="module"></script>
+    </body>
+</html>
