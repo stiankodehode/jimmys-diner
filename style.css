@@ -101,7 +101,7 @@ p {
 
 .orderedItems {
     list-style: none;
-    overflow: scroll;
+    overflow-y: scroll;
     height: 70px;
     padding: 0 2em;
     width: 100%;
