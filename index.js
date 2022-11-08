@@ -73,19 +73,25 @@ const renderMenu = () => {
 };
 
 const renderOrder = () => {
+    // Total price element
     const totalPriceElement = document.querySelector("#finalPrice");
+    let totalPrice = 0;
+
+    // Removing all elements in the ul
     const ul = document.querySelector(".orderedItems");
     while (ul.firstChild) {
         ul.removeChild(ul.firstChild);
     }
-    let totalPrice = 0;
+    // Mapping the items from orderItems
     const orderItems = orderedItems.map((item) => {
+        // adding the price from each item
         totalPrice += item.price;
         const listItem = createNewNode("li", "orderItem");
 
         const nameAndButtonContainer = createNewNode("div", "nameAndButtonContainer");
         const itemName = createNewNode("h3", undefined, item.name);
         const removeButton = createNewNode("button", "removeButton", "(remove)");
+        // event listener on button to remove item
         removeButton.addEventListener("click", () => {
             totalPrice -= item.price;
             ul.removeChild(listItem);
@@ -96,7 +102,7 @@ const renderOrder = () => {
             totalPriceElement.textContent = totalPrice + "$";
         });
         const itemPrice = createNewNode("h3", undefined, item.price + "$");
-
+        // appending the elements to the DOM
         nameAndButtonContainer.appendChild(itemName);
         nameAndButtonContainer.appendChild(removeButton);
 
